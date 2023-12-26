@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="res_partner_employee_quantity_unknown" model="res.partner.employee_quantity_range">
+            <field name="name">Falta preguntar</field>
+            <field name="sequence">0</field>
+            <!-- <field name="minimum_employee_quantity">0</field>
+            <field name="maximum_employee_quantity">0</field>
+            <field name="lead_score">0</field> -->
+        </record>
+
+        <record id="res_partner_employee_quantity_no_employees" model="res.partner.employee_quantity_range">
+            <field name="name">Ninguno</field>
+            <field name="sequence">10</field>
+            <!-- <field name="minimum_employee_quantity">0</field>
+            <field name="maximum_employee_quantity">0</field>
+            <field name="lead_score">1</field> -->
+        </record>
+
+        <record id="res_partner_employee_quantity_range_1_5" model="res.partner.employee_quantity_range">
+            <field name="name">De 1 a 5</field>
+            <field name="sequence">20</field>
+            <!-- <field name="minimum_employee_quantity">1</field>
+            <field name="maximum_employee_quantity">5</field>
+            <field name="lead_score">3</field> -->
+        </record>
+
+        <record id="res_partner_employee_quantity_range_6_25" model="res.partner.employee_quantity_range">
+            <field name="name">De 6 a 25</field>
+            <field name="sequence">30</field>
+            <!-- <field name="minimum_employee_quantity">6</field>
+            <field name="maximum_employee_quantity">25</field>
+            <field name="lead_score">5</field> -->
+        </record>
+
+        <record id="res_partner_employee_quantity_more_than_25" model="res.partner.employee_quantity_range">
+            <field name="name">Más de 25</field>
+            <field name="sequence">40</field>
+            <!-- <field name="minimum_employee_quantity">26</field>
+            <field name="maximum_employee_quantity">9999</field>
+            <field name="lead_score">7</field> -->
+        </record>
+    </data>
+</odoo>
