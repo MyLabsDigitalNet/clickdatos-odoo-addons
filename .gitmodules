@@ -1,0 +1,4 @@
+[submodule "oca-odoo-addons"]
+	path = oca-odoo-addons
+	url = https://github.com/Qsimov/oca-odoo-addons.git
+	branch = 16.0
