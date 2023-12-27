@@ -13,7 +13,9 @@ class CrmLead(models.Model):
     )
     web_seal = fields.Char(string='Sello Web')
     is_on_site = fields.Boolean(string='¿Presencial?', default=False, copy=False)
-    is_advertisement_friedly = fields.Boolean(string='Acepta Publicidad', default=False, copy=False)
+    advertisement = fields.Selection([("si", "Si"), 
+                                      ("no", "No"),
+                                      ("falta_contrato", "Falta contrato")], string='Acepta Publicidad', default=False, copy=False)
 
     def _prepare_customer_values(self, partner_name, is_company=False, parent_id=False):
         res = super(CrmLead, self)._prepare_customer_values(partner_name, is_company=is_company, parent_id=parent_id)
@@ -23,5 +25,5 @@ class CrmLead(models.Model):
             })
         res.update({'web_seal': self.web_seal,
                     'is_on_site': self.is_on_site,
-                    'is_advertisement_friedly': self.is_advertisement_friedly, })
+                    'advertisement': self.advertisement, })
         return res

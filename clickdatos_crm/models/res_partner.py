@@ -14,7 +14,9 @@ class ResPartner(models.Model):
     )
     web_seal = fields.Char(string='Sello Web')
     is_on_site = fields.Boolean(string='¿Presencial?', default=False, copy=False)
-    is_advertisement_friedly = fields.Boolean(string='Acepta Publicidad', default=False, copy=False)
+    advertisement = fields.Selection([("si", "Si"), 
+                                      ("no", "No"),
+                                      ("falta_contrato", "Falta contrato")], string='Acepta Publicidad', default=False, copy=False)
 
 class ResPartnerEmployeeQuantityRange(models.Model):
     _name = "res.partner.employee_quantity_range"

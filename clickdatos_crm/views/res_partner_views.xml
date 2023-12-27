@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='vat']" position="after">
                 <field name="is_on_site"/>
-                <field name="is_advertisement_friedly"/>
+                <field name="advertisement"/>
             </xpath>
             
             <xpath expr="//field[@name='website']" position="after">

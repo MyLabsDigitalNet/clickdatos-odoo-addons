@@ -9,7 +9,7 @@
                 <field name="employee_quantity_range_id"/>
                 <field name="web_seal"/>
                 <field name="is_on_site"/>
-                <field name="is_advertisement_friedly"/>
+                <field name="advertisement"/>
             </xpath>
         </field>
     </record>
