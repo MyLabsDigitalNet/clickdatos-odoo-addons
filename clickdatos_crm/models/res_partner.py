@@ -6,7 +6,7 @@ from odoo import fields, models
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
-    employee_quantity = fields.Integer()
+    employee_quantity = fields.Integer(string='Cantidad de Empleados')
     employee_quantity_range_id = fields.Many2one(
         comodel_name="res.partner.employee_quantity_range",
         string="Rango de Empleados",
