@@ -14,9 +14,13 @@ class ResPartner(models.Model):
     )
     web_seal = fields.Char(string='Sello Web')
     is_on_site = fields.Boolean(string='¿Presencial?', default=False, copy=False)
-    advertisement = fields.Selection([("si", "Si"), 
+    advertisement = fields.Selection([("si", "Sí"), 
                                       ("no", "No"),
                                       ("falta_contrato", "Falta contrato")], string='Acepta Publicidad', default=False, copy=False)
+    
+    dismiss_state = fields.Selection([("activo", "Activo"), 
+                                      ("baja", "Baja"),], string='Estado', default=False, copy=False)
+
     source_id = fields.Many2one('utm.source', string='Origen', ondelete='restrict', copy=False)
 
 class ResPartnerEmployeeQuantityRange(models.Model):

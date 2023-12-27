@@ -8,6 +8,7 @@
             <xpath expr="//field[@name='vat']" position="after">
                 <field name="is_on_site"/>
                 <field name="advertisement"/>
+                <field name="dismiss_state"/>
             </xpath>
 
             <xpath expr="//field[@name='category_id']" position="after">

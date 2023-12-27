@@ -13,7 +13,7 @@ class CrmLead(models.Model):
     )
     web_seal = fields.Char(string='Sello Web')
     is_on_site = fields.Boolean(string='¿Presencial?', default=False, copy=False)
-    advertisement = fields.Selection([("si", "Si"), 
+    advertisement = fields.Selection([("si", "Sí"), 
                                       ("no", "No"),
                                       ("falta_contrato", "Falta contrato")], string='Acepta Publicidad', default=False, copy=False)
 
