@@ -21,10 +21,7 @@ class CrmLead(models.Model):
             res.update({
                 'employee_quantity_range_id': self.employee_quantity_range_id.id,
             })
-        else:
-            res.update({'email': self.contact_email,
-                        'category_id': [Command.set(self.partner_category_ids.ids)],
-                        'web_seal': self.web_seal,
-                        'is_on_site': self.is_on_site,
-                        'is_advertisement_friendly': self.is_advertisement_friedly, })
+        res.update({'web_seal': self.web_seal,
+                    'is_on_site': self.is_on_site,
+                    'is_advertisement_friedly': self.is_advertisement_friedly, })
         return res
