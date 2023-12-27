@@ -17,6 +17,7 @@ class ResPartner(models.Model):
     advertisement = fields.Selection([("si", "Si"), 
                                       ("no", "No"),
                                       ("falta_contrato", "Falta contrato")], string='Acepta Publicidad', default=False, copy=False)
+    source_id = fields.Many2one('utm.source', string='Origen', ondelete='restrict', copy=False)
 
 class ResPartnerEmployeeQuantityRange(models.Model):
     _name = "res.partner.employee_quantity_range"

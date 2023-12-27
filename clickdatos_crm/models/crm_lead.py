@@ -25,5 +25,6 @@ class CrmLead(models.Model):
             })
         res.update({'web_seal': self.web_seal,
                     'is_on_site': self.is_on_site,
-                    'advertisement': self.advertisement, })
+                    'advertisement': self.advertisement, 
+                    'source_id': self.source_id.id,})
         return res
