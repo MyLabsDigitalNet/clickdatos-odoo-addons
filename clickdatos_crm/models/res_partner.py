@@ -12,7 +12,7 @@ class ResPartner(models.Model):
         string="Rango de Empleados",
         help="Range of this partner depending on the employee quantity.",
     )
-    web_seal = fields.Char(string='Sello Web')
+    web_seal = fields.Text(string='Sello Web')
     is_on_site = fields.Boolean(string='¿Presencial?', default=False, copy=False)
     advertisement = fields.Selection([("si", "Sí"), 
                                       ("no", "No"),

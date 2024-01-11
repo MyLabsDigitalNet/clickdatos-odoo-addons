@@ -6,10 +6,10 @@
         <field name="inherit_id" ref="crm.crm_lead_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='tag_ids']" position="after">
-                <field name="employee_quantity_range_id"/>
-                <field name="web_seal"/>
+                <field name="employee_quantity_range_id" invisible="1"/>
+                <field name="web_seal" invisible="1"/>
                 <field name="is_on_site"/>
-                <field name="advertisement"/>
+                <field name="advertisement" invisible="1"/>
             </xpath>
         </field>
     </record>

@@ -19,12 +19,13 @@ class CrmLead(models.Model):
 
     def _prepare_customer_values(self, partner_name, is_company=False, parent_id=False):
         res = super(CrmLead, self)._prepare_customer_values(partner_name, is_company=is_company, parent_id=parent_id)
-        if is_company:
-            res.update({
-                'employee_quantity_range_id': self.employee_quantity_range_id.id,
-            })
-        res.update({'web_seal': self.web_seal,
-                    'is_on_site': self.is_on_site,
-                    'advertisement': self.advertisement, 
-                    'source_id': self.source_id.id,})
+        # if is_company:
+        #     res.update({
+        #         'employee_quantity_range_id': self.employee_quantity_range_id.id,
+        #     })
+        res.update({'is_on_site': self.is_on_site,
+                    'source_id': self.source_id.id,
+                    # 'web_seal': self.web_seal,
+                    # 'advertisement': self.advertisement, 
+                    })
         return res
