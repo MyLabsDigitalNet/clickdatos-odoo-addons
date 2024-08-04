@@ -23,6 +23,8 @@ class ResPartner(models.Model):
 
     source_id = fields.Many2one('utm.source', string='Origen', ondelete='restrict', copy=False)
 
+    activity_ids = fields.One2many(domain=lambda self: [], context={'active_test': False})
+
 class ResPartnerEmployeeQuantityRange(models.Model):
     _name = "res.partner.employee_quantity_range"
     _description = "Partner employee quantity range"

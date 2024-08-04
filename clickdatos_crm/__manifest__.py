@@ -9,7 +9,7 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["contacts", "crm",],
+    "depends": ["contacts", "crm", "mail_activity_board", "mail_activity_done"],
     "data": [
         "security/ir.model.access.csv",
         "data/res_partner_data.xml",
@@ -17,4 +17,9 @@
         "views/res_partner_views.xml",
         "views/crm_lead_views.xml",
     ],
+    'assets': {
+        'web.assets_backend': [
+            'clickdatos_crm/static/src/scss/activity.scss',
+        ],
+    },
 }
