@@ -69,10 +69,13 @@
                                                     <i class="fa fa-pencil"/> Editar
                                                 </button>
                                             </div>
-                                            <div>
+                                            <div class="d-flex justify-content-between">
                                                 <strong class="o_kanban_record_title">
                                                     <field name="res_name"/>
                                                 </strong>
+                                                <span t-attf-class="badge rounded-pill o_tag o_tag_color_{{ record.state.raw_value }}">
+                                                    <field class="o_tag_badge_text" name="state"/>
+                                                </span>
                                                     
                                             </div>
 

@@ -3,4 +3,17 @@
         width: 100% !important;
         margin: 0;
     }
+
+    .o_tag_color_planned {
+        background-color: #6CC1ED;
+    }
+    .o_tag_color_today {
+        background-color: #F4A460;
+    }
+    .o_tag_colot_overdue {
+        background-color: #D6145F;
+    }
+    .o_tag_color_done {
+        background-color: #30C381;
+    }
 }
